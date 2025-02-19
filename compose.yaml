@@ -1,0 +1,32 @@
+#version: '3.8'
+#
+#services:
+#  onlinebookstore:
+#    build: .
+#    container_name: onlinebookstore-app
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - mysql
+#    environment:
+#      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/OnlineBookStore"
+#      SPRING_DATASOURCE_USERNAME: "user"
+#      SPRING_DATASOURCE_PASSWORD: "Supriya"
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+#
+#  mysql:
+#    image: mysql:8.0
+#    container_name: mysql-db
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: "Supriya"
+#      MYSQL_DATABASE: "OnlineBookStore"
+#      MYSQL_USER: "user"
+#      MYSQL_PASSWORD: "Supriya"
+#    ports:
+#      - "3307:3306"  #  Port remains changed
+#    volumes:
+#      - mysql_data:/var/lib/mysql
+#
+#volumes:
+#  mysql_data:

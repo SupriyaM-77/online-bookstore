@@ -3,13 +3,15 @@ package com.example.OnlineBookStore.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +21,7 @@ public class User {
 
     private String password;
 
-//    @Enumerated(EnumType.STRING)
-//    private Role role; // ADMIN, CUSTOMER
+    @Enumerated(EnumType.STRING)
+    private Role role; // ADMIN, CUSTOMER
 }
 
